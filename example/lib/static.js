@@ -8,7 +8,7 @@ var url = require("url"),
 module.exports = function static(parent_path){
 
     return function(req,res,next){  // 这个插件无需调用next。
-        var path = url2path(req.url);
+
         function callback(err,data){
             if(err){
                 res.statusCode = 404;
